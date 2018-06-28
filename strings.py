@@ -8,7 +8,7 @@ def levenstein(A,B):
 			else:
 				F[i][j] = 1 + min(F[i-1][j], F[i][j-1], F[i-1][j-1])
 	return F[len(A)][len(B)]
-	
+
 #Наивный алгоритм равенства строк O(N)
 def equal(A,B):
 	if len(A) != len(B):
@@ -17,13 +17,13 @@ def equal(A,B):
 		if A[i] != B[i]:
 			return False
 	return True
-	
+
 #Поиск подстроки в строке(наивный)
 def search_substring_slow(s, sub):
 	for i in range(0,len(s)-len(sub)):
 		if equal(s[i : i + len(sub)], sub):
 			print(i)
-			
+
 #Префикс для алгоритма Кнутта-Морриса-Пратта
 def prefix(string):
 	M = [0]*len(string)
@@ -45,10 +45,7 @@ def search_kmp(string, sub_string):
 	K = prefix(new_string)
 	for i in range(0, len(new_string)):
 		if K[i] == len(sub_string):
-			return i - len(sub_string)*2 
+			return i - len(sub_string)*2
 	return -1
-			
-	
 
-	
-	
+print('yet another test')
