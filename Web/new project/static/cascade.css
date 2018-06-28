@@ -1,0 +1,31 @@
+body {
+    background-color: e0e5f4
+}
+
+.navbar {
+    background-color: 3953A8;
+    color: e0e5f4
+}
+
+.menu div {
+    background-color: magenta;
+    margin-right:
+}
+
+a:link {
+    color: E0E5F4
+}
+
+a:visited {
+    color: 98a7da
+}
+
+a:hover {
+    color: e0e5f4
+}
+
+.row > div {
+    padding: 40px;
+    background-color: teal;
+    border: 2px solid black
+}
