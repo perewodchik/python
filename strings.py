@@ -47,3 +47,5 @@ def search_kmp(string, sub_string):
 		if K[i] == len(sub_string):
 			return i - len(sub_string)*2
 	return -1
+
+print('yet another test')
