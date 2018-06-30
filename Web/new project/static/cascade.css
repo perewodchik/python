@@ -4,9 +4,9 @@ html,body {
 
 }
 
-.navbar {
+body .navbar {
     background-color: 3953A8;
-    color: e0e5f4
+    color: ffffff;
 }
 
 .menu div {
@@ -14,16 +14,12 @@ html,body {
     margin-right:
 }
 
-a:link {
-    color: E0E5F4
-}
-
-a:visited {
-    color: 98a7da
+.navbar {
+    color: ffffff
 }
 
 a:hover {
-    color: e0e5f4
+    color: ffffff
 }
 
 .row > div {
@@ -40,16 +36,4 @@ a:hover {
 
 #container {
     height: 90%
-}
-
-@media (max-width: 510px) {
-    #work_in_progress {
-        display: none;
-    }
-}
-
-@media (max-width: 360px) {
-    #second_link {
-        display: none;
-    }
 }

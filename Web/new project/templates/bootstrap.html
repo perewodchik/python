@@ -1,42 +1,49 @@
 <html>
     <head>
-        <title>Some random test title</title>
+        <title>Perewodchik's site</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="bootstrap.min.css">
-         <link rel="stylesheet" type="text/css" href="cascade.css">
+        <link rel="stylesheet" href=" {{ url_for('static', filename='bootstrap.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cascade.css') }}">
+        <script src="{{ url_for('static', filename='slim.js') }}" ></script>
+        <script src="{{ url_for('static', filename='popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.js') }}" ></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-light" role="navigation">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#"><img src="favicon.ico"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Click me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Work in progress</a>
-                </li>
-            </ul>
-            <button class="navbar-toggler border border-dark rounded" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-             </button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav-link active" href="#"><img src="{{ url_for('static', filename='favicon.ico') }}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_wrapper" aria-controls="navbar_wrapper" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar_wrapper">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="">
+                        <a class="nav-link" href="#"> Click me</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="#" id="second_link">Click me</a>
+                    </li>
+                    <li class="" id="work_in_progress">
+                        <a class="nav-link disabled" href="#">Work in progress</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid" id="container">
+            <div id="columns" class="row position-relative">
                 <div class="col-sm-3">
                     One of three columns
                 </div>
                 <div class="col-sm-6">
-                    Look homie, here must be some information
+                    Look homie, here must be some info
                 </div>
                 <div class="col-sm-3">
                     One of three columns
                 </div>
             </div>
         </div>
+        <div class='fixed-bottom'>Made by perewodchik</div>
     </body>
 </html>
