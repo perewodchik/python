@@ -34,3 +34,24 @@ body footer {
 body footer a {
     color: D5DCEE;
 }
+
+#caesar_form {
+    background-color: ffffff;
+}
+
+#caesar_form textarea {
+    margin-bottom: 20px;
+}
+
+#encrypted {
+    background-color: ffffff;
+}
+
+#encrypted div:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+div .caesar_wrapper {
+    background-color: A8B1C6;
+    padding: 10px;
+}

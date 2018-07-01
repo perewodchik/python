@@ -18,13 +18,13 @@
             <div class="collapse navbar-collapse" id="navbar_wrapper">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="">
-                        <a class="nav-link" href="#"> Click me</a>
+                        <a class="nav-link" href="{{ url_for('caesar') }}">Caesar cipher</a>
                     </li>
                     <li class="">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link disabled" href="#">Click on the first link instead</a>
                     </li>
                     <li class="">
-                        <a class="nav-link" href="#" id="second_link">Click me</a>
+                        <a class="nav-link disabled" href="#" id="second_link">Features</a>
                     </li>
                     <li class="" id="work_in_progress">
                         <a class="nav-link disabled" href="#">Work in progress</a>
@@ -36,12 +36,10 @@
         <div class="container-fluid" id="container">
             <div id="columns" class="row position-relative">
                 <div class="col-sm-6">
-                    <h1>This is the first column!</h1>
                     {% block first_column %}
                     {% endblock %}
                 </div>
-                <div class="col-sm-6">
-                    <h1>This is the second column!</h1>
+                <div class="col-sm-6 text-center">
                     {% block second_column %}
                     {% endblock %}
                 </div>

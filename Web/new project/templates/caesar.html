@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+
+{% block first_column %}
+    <h2 class="font-weight-normal text-center mb-4">Type text to cipher using caesar method</h2>
+    <div class="container form-check col-12  col-md-10 col-lg-8 align-items-start pt-4 pl-4 pr-4 pb-2 rounded  " id="caesar_form">
+        <form action="{{ url_for('caesar') }}" method="post">
+            <textarea class="w-100" rows="3" id="caesar_input" name="caesar_text" placeholder="Type your text here"></textarea>
+            <div class='row mb-2'>
+                <label class="form-check-label col-lg-3 col-6" for="caesar_key">Use shift:</label>
+                <input class="col-5 col-lg-3 ml-2 text-right" type="number" name="caesar_key" value="1">
+
+            </div>
+            <button>Encrypt</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block second_column %}
+    {% if encrypted_string is defined %}
+        <h2 class="font-weight-normal text-center mb-4 ">You successfully encrypted the text!</h2>
+        <div class="container rounded p-4 col-lg-9 cold-md-10" id="encrypted">
+            <div class="caesar_wrapper">
+                <h4 class="text-center">Your text:</h4>
+                <p class="text-left text-justify"> {{ string }} </p>
+            </div>
+            <div class="caesar_wrapper">
+                <h4 class="text-left">Shift : {{ shift }}</h4>
+            </div>
+            <div class="caesar_wrapper">
+                <h4 class="text-center">Encrypted text :</h4>
+                <p class="text-left text-justify"> {{ encrypted_string }} </p>
+            </div>
+        </div>
+    {% else %}
+        <h2 class="font-weight-normal text-center mb-4">Here will be encrypted text</h2>
+    {% endif %}
+
+{% endblock %}

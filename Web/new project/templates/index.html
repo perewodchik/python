@@ -2,13 +2,13 @@
 
 
 {% block first_column %}
-    <h3>Здесь можно ввести имя</h3>
-    <form action="{{ url_for('hello') }}"  method="post">
-        <input type="text" name="name" placeholder="Enter your name">
-        <button>Submit</button>
-    </form>
-    <h3>А здесь можно ввести записку</h3>
-    <form action="{{ url_for('index') }}" method="POST">
+    <div class="container text-center col-10" style="background-color: ffffff; padding: 20px; margin-bottom: 20px">
+        <h4>This page is not yet finished so please enjoy this can of cola instead</h4>
+        <img src="{{ url_for('static', filename='cola.png') }}">
+    </div>
+
+    <h3 class="text-center">And here you can type a note to display on the second column</h3>
+    <form class="text-center" action="{{ url_for('index') }}" method="POST">
         <input type="text" name="note" placeholder="Type a note here">
         <button>Add note</button>
     </form>

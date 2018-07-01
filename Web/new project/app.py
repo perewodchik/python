@@ -1,5 +1,6 @@
 from flask import *
 from flask_session import Session
+from caesar import caesar_cipher
 
 app = Flask(__name__)
 
@@ -23,7 +24,17 @@ def hello():
 	name = request.form.get("name")
 	return render_template("hello.html", name=name)
 
+@app.route("/caesar", methods=["GET", "POST"])
+def caesar():
+	if request.method == "POST":
+		string = request.form.get("caesar_text")
+		shift = int( request.form.get("caesar_key") )
+		print("string", string, "shift",shift)
+		encrypted_string = caesar_cipher(string, shift)
+		print("encrypted_string", encrypted_string)
+		return render_template("caesar.html", string=string, shift=shift, encrypted_string=encrypted_string)
 
+	return render_template("caesar.html")
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0')
