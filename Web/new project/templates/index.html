@@ -2,8 +2,9 @@
 
 
 {% block first_column %}
-    <div class="container text-center col-10" style="background-color: ffffff; padding: 20px; margin-bottom: 20px">
-        <h4>This page is not yet finished so please enjoy this can of cola instead</h4>
+    <h2 class="text-center mb-4"> {{ greetings_message }}</h2>
+    <div class="container text-center col-7" style="background-color: ffffff; padding: 20px; margin-bottom: 20px">
+        <h4>I think you would like a can of cola!</h4>
         <img src="{{ url_for('static', filename='cola.png') }}">
     </div>
 
@@ -17,7 +18,7 @@
 {% block second_column %}
     <ul>
         {% for note in notes %}
-            <li> {{ note }} </li>
+            <li> {{ note.username }} typed: {{ note.note }} </li>
             {% endfor %}
     </ul>
 {% endblock %}

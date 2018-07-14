@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block first_column %}
+    <h2 class="font-weight-normal text-center mb-4">First time here? Register now!</h2>
+    <div class="container form-check col-12  col-md-10 col-lg-8 align-items-start pt-4 pl-4 pr-4 pb-2 rounded" id="register_form">
+        <form action="{{ url_for('registration_success') }}" method="post">
+            <div class="form-group">
+                <label for="username_input_reg">Name</label>
+                <input type="text" class="form-control" id="username_input_reg" name="reg_name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="password_input_reg">Password</label>
+                <input type="password" class="form-control" id="password_input_reg" name="reg_pass" placeholder="Enter password">
+                <small class="form-text text-muted">This is confidential...kind of</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block second_column %}
+    <h2 class="font-weight-normal text-center mb-4">Already been here? Log in!</h2>
+    <div class="container form-check col-12  col-md-10 col-lg-8 align-items-start pt-4 pl-4 pr-4 pb-2 rounded" id="login_form">
+        <form action="{{ url_for('login') }}" method="post">
+            <div class="form-group">
+                <label for="username_input_reg">Name</label>
+                <input type="text" class="form-control" id="username_input_reg" name="log_name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="password_input_reg">Password</label>
+                <input type="password" class="form-control" id="password_input_reg" name="log_pass" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <h2 class="font-weight-normal text-center mb-4">Log out in case you need to</h2>
+    <h3 class="font-weight-normal text-center mb-4">¯\_(ツ)_/¯</h3>
+    <form action="{{ url_for('index') }}" method="post" class="text-center">
+        <button type="submit" class="btn btn-primary mx-auto" name="btn_logout" value="logout">Logout→<img src="{{ url_for('static', filename='BibleThump.png') }}"></button>
+    </form>
+{% endblock %}

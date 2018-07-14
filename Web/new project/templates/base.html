@@ -21,7 +21,7 @@
                         <a class="nav-link" href="{{ url_for('caesar') }}">Caesar cipher</a>
                     </li>
                     <li class="">
-                        <a class="nav-link disabled" href="#">Click on the first link instead</a>
+                        <a class="nav-link" href="{{ url_for('login') }}">Register/Login</a>
                     </li>
                     <li class="">
                         <a class="nav-link disabled" href="#" id="second_link">Features</a>
@@ -39,7 +39,7 @@
                     {% block first_column %}
                     {% endblock %}
                 </div>
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-6">
                     {% block second_column %}
                     {% endblock %}
                 </div>
