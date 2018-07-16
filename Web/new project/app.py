@@ -15,10 +15,11 @@ Session(app)
 engine = create_engine("postgres://ucurzlfkjmcwqf:0ef9496e10a6f8fd80f6af62bc2c7b200a7f1e6b08f20ba815d9bbc9be550518@ec2-54-227-240-7.compute-1.amazonaws.com:5432/dct3cpbvs21gfs")
 db = scoped_session(sessionmaker(bind=engine))
 
-
 @app.route('/', methods=["GET", "POST"])
 def index():
 
+	if "logged_in" not in session:
+		session["logged_in"] = False
 
 	if request.form.get("btn_logout") == "logout":
 		session["logged_in"] = False

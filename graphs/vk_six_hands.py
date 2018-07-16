@@ -6,7 +6,7 @@ from collections import deque
 
 HOST = 'https://api.vk.com/method/'
 VERSION = '5.74'
-access_token = '3b7fe2947d3018d3604da5b30df6f48e6cd2086d4e04d890ecf70d65ee753c6caa28ea441e7e50fd7656a'
+access_token = 'f5b07d14abab4882b695f63557b2a8fb8d6f05c273481ea118e54b923ae07a365c5902b0e54a8f13b5cf3'
 
 id_start =	169714598
 id_end = 1770436
@@ -42,7 +42,7 @@ while id_end not in distances:
 			queue.append(u)
 			distances[u] = distances[current_user] + 1
 			parents[u] = current_user
-			
+
 
 path = [id_end]
 parent = parents[id_end]
@@ -60,16 +60,3 @@ for user in path:
 		print('Name:', requested_user['first_name'] + " " + requested_user['last_name'], '- id:', requested_user['id'])
 	else:
 		print("Случилось какое-то говно. Скорее всего, VK API подлагал")
-	
-	
-	
-
-
-
-
-
-
-
-
-
-

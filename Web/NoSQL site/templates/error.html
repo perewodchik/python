@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block first_column %}
+    <div class="text-center">
+         <h3 class="text-center mb-4">It seems like something bad happened. In order to cheer you up,
+              enjoy looking at this beautiful picture so you can forget about this miserable error
+        </h3>
+         <img src="{{ url_for('static', filename='smile.png') }}">
+    </div>
+{% endblock %}
+
+{% block second_column %}
+    <h2 class="text-center mb-4">{{ error_message }}</h2>
+    {% if error_message == "The credentials you have provided are invalid" or error_message == "Someone already registered with that name" %}
+        <a href="{{ url_for('login') }}" ><h4 class="text-center font-weight-bold">Try AGANE <img src="{{ url_for('static', filename='xqcS.png') }}"></h4></a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,61 @@
+body {
+    background-color: e0e5f4;
+}
+
+body .navbar {
+    background-color: 3953A8;
+    color: ffffff;
+}
+
+.menu div {
+    background-color: magenta;
+    margin-right:
+}
+
+.navbar {
+    color: ffffff
+}
+
+a:hover {
+    color: ffffff
+}
+
+#container .row > div {
+    padding: 40px;
+    color: 05309b;
+    height: 800px;
+}
+
+body footer {
+    background-color: 345BBD;
+    color: FFB929;
+}
+
+body footer a {
+    color: D5DCEE;
+}
+
+#caesar_form {
+    background-color: ffffff;
+}
+
+#caesar_form textarea {
+    margin-bottom: 20px;
+}
+
+#encrypted {
+    background-color: ffffff;
+}
+
+#encrypted div:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+div .caesar_wrapper {
+    background-color: A8B1C6;
+    padding: 10px;
+}
+
+ul, li {
+  list-style-type: none;
+}

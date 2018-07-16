@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Perewodchik's site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href=" {{ url_for('static', filename='bootstrap.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cascade.css') }}">
+        <script src="{{ url_for('static', filename='slim.js') }}" ></script>
+        <script src="{{ url_for('static', filename='popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.js') }}" ></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="nav-link active" href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='favicon.ico') }}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_wrapper" aria-controls="navbar_wrapper" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar_wrapper">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="">
+                        <a class="nav-link" href="{{ url_for('caesar') }}">Caesar cipher</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="{{ url_for('vk') }}" id="second_link">VK</a>
+                    </li>
+                    <li class="" id="work_in_progress">
+                        <a class="nav-link disabled" href="#">Work in progress</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid" id="container">
+            <div id="columns" class="row position-relative">
+                <div class="col-sm-6">
+                    {% block first_column %}
+                    {% endblock %}
+                </div>
+                <div class="col-sm-6">
+                    {% block second_column %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer font-small blue pt-4 mt-4">
+            <div class="container-fluid text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-6 mt-md-0 mt-3">
+                        <h5 class="text-uppercase">I made this</h5>
+                        <p>No, I made this :)</p>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <h5 class="text-uppercase">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://github.com/perewodchik/python">My GitHub with python code</a>
+                            </li>
+                            <li>
+                                <a href="https://translate.google.com/">P E R E V O D C H I K</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

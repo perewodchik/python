@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block first_column %}
+<h2 class="font-weight-normal text-center mb-4">Введите ID пользователя, которого нужно проверить на попущенность</h2>
+<div class="container form-check col-12  col-md-10 col-lg-8 align-items-end pt-4 pl-4 pr-4 pb-2 rounded" id="vk_form">
+    <form action="{{ url_for('vk') }}" method="post">
+            <div class='form-group'>
+                <input class="form-control text-right" type="number" name="user_id" value="1">
+            </div>
+        <button class="btn btn-primary">Проверить</button>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block second_column %}
+    <ul style="list-style-type: none">
+        {% for stroke in string_info %}
+            <li>{{stroke}}</li>
+            {% endfor %}
+    </ul>
+
+    <ul>
+        {% for stroke in popushennost %}
+            <li> {{stroke}}</li>
+            {% endfor %}
+    </ul>
+{% endblock %}
